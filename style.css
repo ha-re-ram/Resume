@@ -1,0 +1,238 @@
+body {
+    font-family: 'Calibri', 'Candara', 'Segoe UI', 'Optima', Arial, sans-serif;
+    line-height: 1.4;
+    color: #000;
+    margin: 0;
+    padding: 0;
+    background-color: #e0e0e0;
+    /* Page background */
+}
+
+.resume-container {
+    width: 210mm;
+    margin: 0 auto;
+    background: #fff;
+    padding: 10mm 15mm;
+    /* Increased side padding */
+    box-sizing: border-box;
+    overflow: hidden;
+    /* Prevent horizontal scroll triggers */
+}
+
+@media print {
+    body {
+        background: none;
+    }
+
+    .resume-container {
+        margin: 0;
+        box-shadow: none;
+        width: 100%;
+        height: 100%;
+        padding: 5mm 10mm;
+    }
+
+    .no-print {
+        display: none !important;
+    }
+}
+
+/* Download Button Styling - Now at bottom-right */
+.download-container {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 1000;
+}
+
+.download-button {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 28px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    background: linear-gradient(135deg, #0073b1 0%, #00a0dc 100%);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 4px 20px rgba(0, 115, 177, 0.4);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    font-family: 'Inter', sans-serif;
+}
+
+.download-button:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 8px 30px rgba(0, 115, 177, 0.5);
+    background: linear-gradient(135deg, #005a8a 0%, #0087ba 100%);
+}
+
+.download-button:active {
+    transform: translateY(0);
+}
+
+.download-icon {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
+
+
+/* Header */
+header {
+    text-align: center;
+    padding-bottom: 5px;
+    /* Reduced from 15px since line is gone */
+    margin-bottom: 12px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 26pt;
+    color: #000;
+    font-weight: 800;
+}
+
+.contact-info {
+    margin-top: 8px;
+    font-size: 9.5pt;
+    color: #000;
+}
+
+.contact-info a {
+    color: #0073b1;
+    /* LinkedIn Blue or standard link */
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* Sections */
+section {
+    margin-bottom: 6px;
+    page-break-inside: avoid;
+    break-inside: avoid;
+}
+
+section h2 {
+    font-size: 12pt;
+    text-transform: uppercase;
+    color: #000;
+    border-bottom: 2px solid #000;
+    /* Thicker black border */
+    padding: 2px 0;
+    margin: 0 0 6px 0;
+    font-weight: 800;
+    /* Extra bold headers */
+    letter-spacing: 0.5px;
+    break-after: avoid;
+    /* Prevent orphaned headings */
+}
+
+#summary p {
+    font-size: 10pt;
+    margin: 0;
+    text-align: justify;
+    color: #000;
+}
+
+/* Generic Entry */
+.entry {
+    margin-bottom: 8px;
+}
+
+.entry-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-weight: 700;
+    font-size: 11pt;
+    color: #000;
+}
+
+.compact-entry {
+    margin-bottom: 2px !important;
+}
+
+.project-description {
+    font-size: 10pt;
+    color: #000;
+    text-align: justify;
+    line-height: 1.4;
+    margin-top: 2px;
+}
+
+.entry-header a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.entry-header a:hover {
+    text-decoration: underline;
+    color: #0073b1;
+}
+
+.external-link-icon {
+    display: inline-block;
+    margin-left: 2px;
+    font-size: 10pt;
+    font-weight: bold;
+    color: #0073b1;
+    vertical-align: super;
+    text-decoration: none !important;
+}
+
+.entry-sub {
+    display: flex;
+    justify-content: space-between;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10pt;
+    color: #000;
+    margin-bottom: 4px;
+}
+
+.entry-description {
+    font-size: 10pt;
+    color: #000;
+    text-align: justify;
+    line-height: 1.4;
+    margin-top: 2px;
+}
+
+.entry ul {
+    margin: 0;
+    padding-left: 18px;
+    font-size: 10pt;
+    color: #000;
+    text-align: justify;
+}
+
+.entry li {
+    margin-bottom: 3px;
+}
+
+/* Skills & Coursework */
+.skills-grid {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    font-size: 10pt;
+    gap: 8px;
+    color: #000;
+}
+
+.skill-category {
+    font-weight: 700;
+    color: #000;
+}
+
+/* Highlights */
+b,
+strong {
+    color: #000;
+    font-weight: 600;
+}
